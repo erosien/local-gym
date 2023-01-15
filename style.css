@@ -1,0 +1,435 @@
+* {
+    /* border: 1px solid red; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 0px;
+    background-color: rgb(231, 97, 13);
+}
+
+.nav-container {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: auto;
+    grid-template-areas: "menu brand"; 
+    justify-items: stretch;
+    align-items: stretch;
+    justify-content: end;
+    column-gap: 30px;
+    padding: 10px;
+    background-color: hsl(30, 4%, 29%);
+}
+
+.nav-brand {
+    grid-area: brand;
+    font-size: 1em;
+    color: black;
+    font-style: italic;
+}
+
+.nav-items {
+    grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 5px;
+}
+
+.nav-item {
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: dotted underline;
+}
+
+.first-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: "header"; 
+    justify-items: stretch;
+    align-items: stretch;
+    position: relative;
+}
+
+.header {
+    position: relative;
+    background-color: rgba(231, 96, 13, 0.669);
+}
+
+.header-image {
+    object-fit: cover;
+    width: 100%;
+}
+
+.image-text {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    padding: 10px;
+}
+
+.book {
+    padding: 10px;
+    color: black;
+    background-color: rgba(231, 96, 13, 0.669);
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 200px;
+}
+
+.classes {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: fit-content(100px) 
+                                        fit-content(30%);
+    grid-template-areas: 
+    "title title title"
+    "description description-2 description-3"; 
+    justify-items: center;
+    align-items: stretch;
+    column-gap: 10px;
+    background-color: rgba(231, 96, 13, 0.669);
+    margin: 10px;
+}
+
+.class-title {
+    grid-area: title;
+    background-color: rgba(170, 70, 7, 0.669);
+    width: 95%;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.description {
+    grid-area: description;
+}
+
+.description-2 {
+    grid-area: description-2;
+}
+
+.description-3 {
+    grid-area: description-3;
+}
+
+.description, 
+.description-2, 
+.description-3 {
+    text-align: center;
+    width: 95%;
+}
+
+.yoga-image, .sound-image,
+.strength-image {
+    object-fit: cover;
+    width: 95%;
+    height: 150px;
+    border: 1px;
+    border-radius: 20px;
+}
+
+.newsletter {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, 30px);
+    grid-template-areas: 
+    "newsletter"
+    "firstname"
+    "lastname"
+    "email"
+    "nlbutton";
+    background-color: rgba(170, 70, 7, 0.669);
+    padding-bottom: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 20px;
+}
+
+.sign-up {
+    justify-content: center;
+    text-align: center;
+}
+
+.newsletter-title {
+    grid-area: newsletter;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.firstname, .lastname, .email {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    justify-content: center;
+    padding: 2px;
+}
+
+label {
+    padding-right: 10px;
+}
+
+.newsletter-button {
+    padding: 2px;
+}
+
+.newsletterbutton {
+    padding: 10px;
+    color: black;
+    background-color: rgba(231, 96, 13, 0.669);
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 200px;
+    grid-area: nlbutton;
+}
+
+.bottom {
+    display: grid;
+    grid-template-columns:  repeat(4, auto) ;
+    grid-template-rows: auto;
+    grid-template-areas: "title address links social";
+    justify-content: space-around;
+    height: 100px;
+}
+
+.title {
+    grid-area: title;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.address {
+    grid-area: address;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.links {
+    grid-area: links;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.social {
+    grid-area: social;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.foot-items {
+    list-style-type: none;
+}
+
+.foot-item {
+    padding: 10px;
+}
+
+h4 {
+    font-size: 3em;
+}
+
+.add {
+    font-size: 12px;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    grid-template-rows: 
+    100px
+    auto;
+    grid-template-areas: 
+    "at at"
+    "a-image a-details";
+    justify-content: center;
+    column-gap: 50px;
+}
+
+.about-title {
+    grid-area: at;
+    text-align: center;
+}
+
+.about-details {
+    grid-area: a-details;
+    background-color: rgba(170, 70, 7, 0.669);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.details {
+    font-size: 20px;
+}
+
+.about-image {
+    object-fit: cover;
+    width: 100%;
+    grid-area: a-image;
+    border: 1px;
+    border-radius: 20px;
+}
+
+.sign-up-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px 45% 40%;
+    grid-template-areas: 
+    "signuptitle"
+    "signupform"
+    "signupimage";
+    row-gap: 20px;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+    margin: 20px;
+}
+
+.sign-up-title {
+    grid-area: signuptitle;
+}
+
+.sign-up-form {
+    grid-area: signupform;
+    background-color: rgba(170, 70, 7, 0.669);
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.fn, .ln, .bd, .em, .pn, .pw {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    padding: 15px;
+}
+
+.signupbutton {
+    padding: 10px;
+    color: black;
+    background-color: rgba(231, 96, 13, 0.669);
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 200px;
+}
+
+.image-container {
+    grid-area: signupimage;
+}
+
+.sign-up-image {
+    object-fit: cover;
+    height: 100%;
+    width: 500px;
+    border: 1px;
+    border-radius: 20px;
+}
+
+.sign-in-container {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    grid-template-rows: 100px 300px;
+    grid-template-areas: 
+    "signintitle signintitle"
+    "signinform signinimage";
+    column-gap: 60px;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.sign-in-title {
+    grid-area: signintitle;
+}
+
+.sign-in-image {
+    grid-area: signinimage;
+}
+
+.signinimage {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    border: 1px;
+    border-radius: 20px;
+}
+
+.sign-in-form {
+    grid-area: signinform;
+    background-color: rgba(170, 70, 7, 0.669);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.signin-email, .signin-password {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    padding: 2px;
+}
+
+.si-button-container, .forgotpassword {
+    padding: 2px;
+}
+
+.signinbutton {
+    padding: 10px;
+    color: black;
+    background-color: rgba(231, 96, 13, 0.669);
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 200px;
+}
+
+.sign-out-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: 
+    "signout"
+    "signoutimage";
+    row-gap: 40px;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    padding-bottom: 20px;
+}
+
+.sign-out {
+    background-color: rgba(170, 70, 7, 0.669);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.signoutimage {
+    object-fit: cover;
+    height: 100%;
+    width: 500px;
+    border: 1px;
+    border-radius: 20px;
+}
